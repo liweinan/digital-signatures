@@ -6,38 +6,46 @@ Here are the instructions to deploy the examples to WildFly and test it:
 
 The first step is to start WildFly server(We can use both standalone mode or domain mode for testing, in my example I’ll use standalone mode as default):
 
-'' cute:bin weli$ pwd
-'' /Users/weli/projs/wildfly-8.2.0.Final/bin
-'' cute:bin weli$ ./standalone.sh
-'' ...
-'' 11:01:11,119 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 5692ms - Started 317 of 378 services (102 services are lazy, passive or on-demand)
+```
+cute:bin weli$ pwd
+/Users/weli/projs/wildfly-8.2.0.Final/bin
+cute:bin weli$ ./standalone.sh
+...
+11:01:11,119 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 5692ms - Started 317 of 378 services (102 services are lazy, passive or on-demand)
+```
 
 After WildFly server is started, we need to go to example ‘no-dns’ directory and deploy the example to WildFly server. We can run this command in ‘no-dns’ directory to do the deployment:
 
-'' cute:no-dns weli$ pwd
-'' /Users/weli/projs/digital-signatures/no-dns
-'' 
-'' cute:no-dns weli$ mvn -q wildfly:deploy
-'' ...
-'' INFO: XNIO version 3.3.0.Final
-'' May 02, 2015 11:11:31 AM org.xnio.nio.NioXnio <clinit>
-'' INFO: XNIO NIO Implementation Version 3.3.0.Final
-'' May 02, 2015 11:11:31 AM org.jboss.remoting3.EndpointImpl <clinit>
-'' INFO: JBoss Remoting version 4.0.7.Final
+```
+cute:no-dns weli$ pwd
+/Users/weli/projs/digital-signatures/no-dns
+
+cute:no-dns weli$ mvn -q wildfly:deploy
+...
+INFO: XNIO version 3.3.0.Final
+May 02, 2015 11:11:31 AM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.3.0.Final
+May 02, 2015 11:11:31 AM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.7.Final
+```
 
 If the example is successfully deployed to WildFly server, we can see the relative server log output in WildFly server console:
 
-'' 11:11:32,354 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015876: Starting deployment of "content-signature-example.war" (runtime-name: "content-signature-example.war")
-'' 11:11:33,529 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017534: Registered web context: /content-signature-example
-'' 11:11:33,862 INFO  [org.jboss.as.server] (management-handler-thread - 4) JBAS018565: Replaced deployment "content-signature-example.war" with deployment "content-signature-example.war"
+```
+11:11:32,354 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015876: Starting deployment of "content-signature-example.war" (runtime-name: "content-signature-example.war")
+11:11:33,529 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017534: Registered web context: /content-signature-example
+11:11:33,862 INFO  [org.jboss.as.server] (management-handler-thread - 4) JBAS018565: Replaced deployment "content-signature-example.war" with deployment "content-signature-example.war"
+```
 
 After the ‘no-dns’ example is successfully deployed, we can run the integration testing provided by the example:
 
+```
 cute:no-dns weli$ pwd
 /Users/weli/projs/digital-signatures/no-dns
 
 cute:no-dns weli$ mvn -q integration-test
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+```
 
 ```
 -------------------------------------------------------
