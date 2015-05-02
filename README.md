@@ -1,4 +1,4 @@
-resteasy-doseta docs
+resteasy-doseta Documentation
 
 Here are the instructions to deploy the examples to WildFly and test it:
 
@@ -72,3 +72,15 @@ Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
 From above testing output from client side, we can see all the tests are passed. Next let’s see how to play with the ‘use-dns’ example.
 
 ## use-dns
+
+To steps to play with 'use-dns' is similar to the steps of 'no-dns':
+
+1. Start WildFly
+2. run 'mvn wildfly:deploy' to deploy example to WildFly
+3. run 'mvn integration-test' to test the deployment
+
+If all test passed, that means the examples are working.
+
+## References
+
+https://docs.jboss.org/resteasy/docs/3.0.9.Final/userguide/html/signature.html
