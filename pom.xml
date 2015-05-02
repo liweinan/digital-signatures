@@ -1,14 +1,14 @@
 <project>
     <name>Resteasy Doseta Examples</name>
     <groupId>org.jboss.resteasy</groupId>
-    <artifactId>signature-examples-pom</artifactId>
+    <artifactId>digital-signatures</artifactId>
     <packaging>pom</packaging>
     <version>3.0.10.Final</version>
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
+        <dep.junit.version>4.8.2</dep.junit.version>
         <dep.resteasy.version>3.0.10.Final</dep.resteasy.version>
-
     </properties>
 
     <dependencies>
