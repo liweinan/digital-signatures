@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Built-By: weinanli
+Build-Jdk: 1.7.0_25
+Created-By: Apache Maven 3.2.3
+Archiver-Version: Plexus Archiver
+Dependencies: org.jboss.resteasy.resteasy-crypto,javax.activation.api,org.bouncycastle
+
