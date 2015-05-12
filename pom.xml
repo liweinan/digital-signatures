@@ -10,6 +10,7 @@
         <dep.junit.version>4.8.2</dep.junit.version>
         <dep.resteasy.version>3.0.10.Final</dep.resteasy.version>
         <dep.javax.mail.version>1.5.0-b01</dep.javax.mail.version>
+        <dep.bc.version>1.52</dep.bc.version>
     </properties>
 
     <dependencies>
